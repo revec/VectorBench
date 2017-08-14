@@ -16,9 +16,6 @@ if [ "$1" == "spec2006" ]; then
     echo "${red}running spec2006 benchmarks${reset}"
     cd spec2006-install
     . ./shrc
-    echo $CC
-    echo $CXX
-    sleep 10
     if [ $SPEC2006_CONFIG == "" ]; then
 	echo "error specify spec2006 config using env var SPEC2006_CONFIG"
 	exit

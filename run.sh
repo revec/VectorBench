@@ -19,6 +19,7 @@ fi
 if ([ -f $COMP_BUILD_DIR/bin/clang ]) && ([ -f $COMP_BUILD_DIR/bin/clang++ ]); then
     export CC="$COMP_BUILD_DIR/bin/clang"
     export CXX="$COMP_BUILD_DIR/bin/clang++"
+    echo "${red}clang found${reset}"
     echo $CC
     echo $CXX
     sleep 10

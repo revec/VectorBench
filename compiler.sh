@@ -31,10 +31,13 @@ cd $COMP_BUILD_DIR
 #build the release version of the compiler
 if [ "$COMP_GENERATE" != "0" ]; then
     DARWIN=`expr "$(uname -a)" : '.*\(Darwin\).*'`
-    LINUX=`expr "$(uname -a)" : '.*\(Darwin\).*'`
+    LINUX=`expr "$(uname -a)" : '.*\(Linux\).*'`
     if [ "$DARWIN" == ""] && [ "$LINUX" == "" ]; then
 	echo "Unknown system cannot run cmake"
+	exit
     fi
+    echo "system is apple - $DARWIN, Linux - $LINUX"
+    sleep 10
     if [ "$COMP_VERSION" != "Debug" ] || [ "$COMP_VERSION" != "Release" ]; then
 	echo "warning build type not selected or wrong type; building release version"
 	COMP_VERSION=Release
