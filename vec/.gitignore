@@ -1,0 +1,6 @@
+*
+!.gitignore
+!NP*/
+!NP*/*
+!run.sh
+!scripts/
