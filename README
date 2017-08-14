@@ -9,6 +9,8 @@ COMP_BUILD = 1/0 - this builds llvm using the environment variables above - defa
 COMP_GENERATE = 1/0 - if COMP_BUILD = 1; this can be used to control whether CMake should be run again - default 1
 COMP_VERSION = Release or debug - if generate is not 0 then this would be used to build the specified version of the project - default Release
 
+config files for spec2006 and spec2017 are in vec/config copy them to the spec installation directory config locations if you want to use them,
+if you are using clang built by this utility then you have to use clang versions of the config files we provide and modify them accordingly
 
 steps
 
@@ -36,3 +38,5 @@ steps
    bench
 	vec - spec2006, spec2017, nas
 	revec - simd
+
+  when running spec2006 or spec2017 please specify the config files using SPEC2006_CONFIG / SPEC2017_CONFIG env variables.
