@@ -5,3 +5,4 @@ llvm-build/
 llvm-src/
 test.cpp
 out*.txt
+logs/

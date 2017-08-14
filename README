@@ -40,3 +40,7 @@ steps
 	revec - simd
 
   when running spec2006 or spec2017 please specify the config files using SPEC2006_CONFIG / SPEC2017_CONFIG env variables.
+
+  example invocations
+
+  COMP_SRC_DIR=/data/scratch/charithm/projects/revec/simd-benchmarks/llvm-src COMP_BUILD_DIR=/data/scratch/charithm/projects/revec/simd-benchmarks/llvm-build COMP_BUILD=1 COMP_GENERATE=1 SPEC2006_CONFIG=linux-clang-spec2006.cfg SPEC2017_CONFIG=linux-clang-spec2017.cfg ./run.sh all
