@@ -1,0 +1,2 @@
+/usr/bin/ar cr libSimdSse41.a  CMakeFiles/SimdSse41.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Simd/SimdSse41Segmentation.cpp.o CMakeFiles/SimdSse41.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Simd/SimdSse41Detection.cpp.o
+/usr/bin/ranlib libSimdSse41.a

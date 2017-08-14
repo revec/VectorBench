@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" />
+<title>Simd Library Release Notes (2017)</title>
+</head>
+<body> <center><table width=1024><tr><td>
+<a id="HOME"><a>
+<center>
+<img width="200" height="100" src="logo.png">
+<h1>Simd Library Release Notes (2017).</h1>
+<a href="index.html">Home</a> |
+<a href="2017.html">Release Notes</a> | 
+<a href="download.html">Download</a> |  
+<a href="help/index.html">Documentation</a> |  
+<a href="http://sourceforge.net/p/simd/discussion/english/">Forum</a> |  
+<a href="http://sourceforge.net/projects/simd/?source=directory" target="_top">SourceForge</a> |
+<a href="http://github.com/ermig1979/Simd" target="_top">GitHub</a> 
+</center>
+<hr/> 
+</td></tr><tr><td>
+
+<center>
+ <a href="2017.html">2017</a> |
+ <a href="2016.html">2016</a> | 
+ <a href="2015.html">2015</a> |
+ <a href="2014.html">2014</a> |
+ <a href="2013.html">2013</a>
+</center>
+
+<hr/>
+
+<h3 id="R051">March 2, 2017 (version 3.4.51.886)</h3> 
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Function Simd::ReduceGray.</li>
+<ul>
+<h5>Improving</h5>
+<ul>
+ <li>Using of Simd::Parallel in Simd::Detection instead of its own implementation of multithreading.</li>
+ <li>Improving of AVX2 optimization of function Binarization.</li>
+ <li>Improving of AVX2 optimization of function AveragingBinarization.</li>
+ <li>Improving of AVX2 optimization of function ConditionalFill.</li>
+ <li>Improving of AVX2 optimization of function HogDirectionHistograms.</li>
+ <li>Improving of AVX2 optimization of function SegmentationChangeIndex.</li>
+ <li>Improving of AVX2 optimization of function SegmentationPropagate2x2.</li>
+ <li>Improving of AVX2 optimization of function SegmentationFillSingleHoles.</li>
+ <li>Improving of SSE4.1 optimization of function DetectionLbpDetect32fp.</li>
+ <li>Improving of SSE4.1 optimization of function DetectionLbpDetect32fi.</li>
+ <li>Improving of SSE4.1 optimization of function DetectionLbpDetect16ip.</li>
+ <li>Improving of SSE4.1 optimization of function DetectionLbpDetect16ii.</li>
+</ul>
+<h5>Changes</h5>
+<ul>
+ <li>Enumeration SimdReduceType instead of enumeration Simd::Pyramid::BuildType.</li>
+ <li>Function Simd::Fill instead of method Simd::Pyramid::Fill.</li>
+ <li>Function Simd::Build instead of method Simd::Pyramid::Build.</li>
+ <li>Refactoring (template parameter Allocator) in structure View and connected with it functions and structures.</li>
+</ul>
+
+<h5>Bug fixing</h5>
+<ul>
+ <li>Clang compiler error in View struct.</li>
+ <li>Clang compiler error in Frame struct.</li>
+ <li>Clang compiler error in Pixel file.</li>
+ <li>Clang compiler error in ContourDetector struct.</li>
+ <li>Clang specific bug in AVX2 optimization of functions BgrToGray and BgrToBgra.</li>
+ <li>Clang compiler error in function Sse2::ExtractInt32Sum on OSX.</li>
+ <li>GCC build error on Aarch64.</li>
+ <li>Error in base implementation of function FillBgr on Aarch64.</li>
+ <li>Error in base implementation of function FillBgra on Aarch64.</li>
+</ul>
+
+<h4>Infrastructure</h4>
+<h5>New features</h5>
+<ul>
+ <li>Compatibility with Clang C++ compiler.</li>
+ <li>Compatibility with Aarch64 platform.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R050">February 2, 2017 (version 3.4.50.872)</h3> 
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>ContourDetector structure.</li>
+ <li>DrawLine function.</li>
+ <li>DrawRectangle function.</li>
+ <li>ShiftDetector structure.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Special tests for verifying functionality of structure ContourDetector.</li>
+ <li>Special tests for verifying functionality of function DrawLine.</li>
+ <li>Special tests for verifying functionality of function DrawRectangle.</li>
+ <li>Special tests for verifying functionality of structure ShiftDetector.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Incorrect common statistic of influence of memory alignment.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R049">January 3, 2017 (version 3.3.49.861)</h3> 
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Base implementation, SSE2, AVX2 and NEON optimizations of function Int16ToGray.</li>
+ <li>SSE2, AVX2 and NEON optimizations of function HistogramConditional.</li>
+ <li>Neural::DropoutLayer.</li>
+ <li>AVX2 optimization of function NeuralProductSum.</li>
+ <li>Extended functionality of function OperationBinary8u (added bitwise OR operation).</li>
+ <li>AVX2 optimization of function NeuralAddVectorMultipliedByValue.</li>
+ <li>Added operator + (const Rectangle &, const Rectangle &).</li>
+</ul>
+<h5>Improving</h5>
+<ul>
+ <li>Improving of AVX2 optimization of function NeuralAddConvolution5x5.</li>
+ <li>Improving of AVX2 optimization of function NeuralAddConvolution5x5Sum.</li>
+ <li>Improving of AVX2 optimization of function NeuralAddConvolution3x3Sum.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>GCC compiler error in file SimdAvx2Neural.</li>
+ <li>Crash during restoring of training process in function Neural::Train.</li>
+ <li>Visual Studio 2013 compiler bug in file SimdAvx2Neural.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of function Int16ToGray.</li>
+ <li>Tests for verifying functionality of AVX2 version of function NeuralProductSum.</li>
+ <li>Tests for verifying functionality of AVX2 version of function NeuralAddVectorMultipliedByValue.</li>
+</ul>
+
+<h4>Infrastructure</h4>
+<h5>Bug fixing</h5>
+<ul>
+ <li>SimdVersion.h generation error in CMakeLists.txt.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+
+<center>
+ <a href="2017.html">2017</a> |
+ <a href="2016.html">2016</a> | 
+ <a href="2015.html">2015</a> |
+ <a href="2014.html">2014</a> |
+ <a href="2013.html">2013</a>
+</center>
+
+<hr/> 
+
+</td> </tr> </table> </center> </body> </html>

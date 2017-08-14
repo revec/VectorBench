@@ -1,0 +1,3 @@
+FILE(REMOVE_RECURSE
+  "libSimdSse42.a"
+)

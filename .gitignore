@@ -1,9 +1,6 @@
-*
-!compiler.sh
-!run.sh
-!.gitignore
-!README
-!revec/*
-!vec/*
-!revec/
-!vec/
+*~
+.DS_Store
+*/.DS_Store
+llvm-build/
+llvm-src/
+test.cpp

@@ -1,0 +1,712 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" />
+<title>Simd Library Release Notes (2016)</title>
+</head>
+<body> <center><table width=1024><tr><td>
+<a id="HOME"><a>
+<center>
+<img width="200" height="100" src="logo.png">
+<h1>Simd Library Release Notes (2016).</h1>
+<a href="index.html">Home</a> |
+<a href="2017.html">Release Notes</a> | 
+<a href="download.html">Download</a> |  
+<a href="help/index.html">Documentation</a> |  
+<a href="http://sourceforge.net/p/simd/discussion/english/">Forum</a> |  
+<a href="http://sourceforge.net/projects/simd/?source=directory" target="_top">SourceForge</a> |
+<a href="http://github.com/ermig1979/Simd" target="_top">GitHub</a> 
+</center>
+<hr/> 
+</td></tr><tr><td>
+
+<center>
+ <a href="2017.html">2017</a> | 
+ <a href="2016.html">2016</a> | 
+ <a href="2015.html">2015</a> |
+ <a href="2014.html">2014</a> |
+ <a href="2013.html">2013</a>
+</center>
+
+<hr/>
+<h3 id="R048">December 1, 2016 (version 3.3.48.844)</h3> 
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>NEON optimization of function DeinterleaveBgr.</li>
+ <li>NEON optimization of function DeinterleaveBgra.</li>
+ <li>NEON optimization of function InterleaveBgr.</li>
+ <li>NEON optimization of function InterleaveBgra.</li>
+ <li>NEON optimization of function NeuralRelu.</li>
+ <li>NEON optimization of function NeuralRoughSigmoid2.</li>
+ <li>NEON optimization of function NeuralDerivativeSigmoid.</li>
+ <li>NEON optimization of function NeuralDerivativeTanh.</li>
+ <li>NEON optimization of function NeuralDerivativeRelu.</li>
+ <li>NEON optimization of function NeuralMax2x2.</li>
+ <li>NEON optimization of function NeuralAddVectorMultipliedByValue.</li>
+ <li>NEON optimization of function NeuralUpdateWeights.</li>
+ <li>NEON optimization of function NeuralAdaptiveGradientUpdate.</li>
+ <li>NEON optimization of function NeuralAddConvolution3x3.</li>
+ <li>NEON optimization of function NeuralAddConvolution5x5.</li>
+ <li>NEON optimization of function NeuralAddConvolution3x3Back.</li>
+ <li>NEON optimization of function NeuralAddConvolution5x5Back.</li>
+ <li>NEON optimization of function NeuralAddConvolution3x3Sum.</li>
+ <li>NEON optimization of function NeuralAddConvolution5x5Sum.</li>
+ <li>NEON optimization of function DetectionHaarDetect32fp.</li>
+ <li>NEON optimization of function DetectionHaarDetect32fi.</li>
+ <li>NEON optimization of function DetectionLbpDetect32fp.</li>
+ <li>NEON optimization of function DetectionLbpDetect32fi.</li>
+ <li>NEON optimization of function DetectionLbpDetect16ip.</li>
+ <li>NEON optimization of function DetectionLbpDetect16ii.</li>
+ <li>AVX2 optimization of function NeuralAddConvolution5x5Sum.</li>
+ <li>AVX2 optimization of function NeuralAddConvolution3x3Sum.</li>
+ <li>AVX2 optimization of function NeuralAddConvolution5x5.</li>
+ <li>AVX2 optimization of function NeuralRoughSigmoid2.</li>
+ <li>Base implementation of function HistogramConditional.</li>
+</ul>
+<h5>Improving</h5>
+<ul>
+ <li>Improving of SSE2 and AVX2 optimizations of function NeuralConvert.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Algorithmic error in function NeuralDerivativeRelu.</li>
+ <li>Visual Studio 2013 compiler bug in file SimdSse3Neural.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of NEON version of function DeinterleaveBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function DeinterleaveBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function InterleaveBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function InterleaveBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralRelu.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralRoughSigmoid2.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralDerivativeSigmoid.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralDerivativeTanh.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralDerivativeRelu.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralMax2x2.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAddVectorMultipliedByValue.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralUpdateWeights.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAdaptiveGradientUpdate.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAddConvolution3x3.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAddConvolution5x5.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAddConvolution3x3Back.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAddConvolution5x5Back.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAddConvolution3x3Sum.</li>
+ <li>Tests for verifying functionality of NEON version of function NeuralAddConvolution5x5Sum.</li>
+ <li>Tests for verifying functionality of NEON version of function DetectionHaarDetect32fp.</li>
+ <li>Tests for verifying functionality of NEON version of function DetectionHaarDetect32fi.</li>
+ <li>Tests for verifying functionality of NEON version of function DetectionLbpDetect32fp.</li>
+ <li>Tests for verifying functionality of NEON version of function DetectionLbpDetect32fi.</li>
+ <li>Tests for verifying functionality of NEON version of function DetectionLbpDetect16ip</li>
+ <li>Tests for verifying functionality of NEON version of function DetectionLbpDetect16ii</li>
+ <li>Tests for verifying functionality of AVX2 version of function NeuralAddConvolution5x5Sum</li>
+ <li>Improved performance report.</li>
+ <li>Tests for verifying functionality of AVX2 version of function NeuralAddConvolution3x3Sum</li>
+ <li>Tests for verifying functionality of AVX2 version of function NeuralAddConvolution5x5</li>
+ <li>Tests for verifying functionality of AVX2 version of function NeuralRoughSigmoid2.</li>
+ <li>Tests for verifying functionality of function HistogramConditional.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Error in cross-platform tests of function OperationBinary8u.</li>
+ <li>Error in cross-platform tests of function NeuralAddConvolution3x3Sum.</li>
+</ul>
+
+<h4>Infrastructure</h4>
+<h5>New features</h5>
+<ul>
+ <li>Added parameter CHECK_VERSION to avoid checking of SVN version in CMakeLists.txt.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R047">November 1, 2016 (version 3.3.47.809)</h3> 
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Added View::Save() and View::Load() methods to save/load images in binary PGM file.</li>
+ <li>Neural framework for CNN (Convolution Neural Network).</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function NeuralRoughSigmoid2.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function NeuralAdaptiveGradientUpdate.</li>
+</ul>
+<h5>Changes</h5>
+<ul>
+ <li>Renamed all functions from SimdAnn* to SimdNeural*.</li>
+ <li>Changed behaviour of function NeuralDerivativeSigmoid.</li>
+ <li>Changed behaviour of function NeuralDerivativeTanh.</li>
+ <li>Changed behaviour of function NeuralDerivativeRelu.</li>
+ <li>Improved accuracy of function NeuralRoughSigmoid.</li>
+ <li>Improved accuracy of function NeuralRoughTanh.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>GCC compiler error in file SimdAllocator.hpp.</li>
+ <li>Error in AVX1 optimization of function NeuralRelu.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Special tests for verifying functionality of Neural::Predict.</li>
+ <li>Special tests for verifying functionality of Neural::Train.</li>
+ <li>Tests for verifying functionality of function NeuralRoughSigmoid2.</li>
+ <li>Tests for verifying functionality of function NeuralAdaptiveGradientUpdate.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Error in tests for verifying functionality of functions NeuralAddConvolution3x3Sum and NeuralAddConvolution5x5Sum.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R046">October 3, 2016 (version 3.2.46.781)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnRelu.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnDerivativeRelu.</li>
+ <li>Base implementation, SSSE3 and AVX2 optimizations of function DeinterleaveBgr.</li>
+ <li>Base implementation, SSSE3 and AVX2 optimizations of function DeinterleaveBgra.</li>
+ <li>Base implementation, SSSE3 and AVX2 optimizations of function InterleaveBgr.</li>
+ <li>Base implementation, SSSE3 and AVX2 optimizations of function InterleaveBgra.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnAddVectorMultipliedByValue.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnAddConvolution5x5Back.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnAddConvolution3x3Back.</li>
+ <li>Base implementation, SSE1, SSE3 and AVX1 optimizations of function AnnAddConvolution3x3Sum.</li>
+ <li>Base implementation, SSE1, SSE3 and AVX1 optimizations of function AnnAddConvolution5x5Sum.</li>
+ <li>Simd::Allocator can be used as an allocator for STL containers.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of function AnnRelu.</li>
+ <li>Tests for verifying functionality of function AnnDerivativeRelu.</li>
+ <li>Tests for verifying functionality of function DeinterleaveBgr.</li>
+ <li>Tests for verifying functionality of function DeinterleaveBgra.</li>
+ <li>Tests for verifying functionality of function InterleaveBgr.</li>
+ <li>Tests for verifying functionality of function InterleaveBgra.</li>
+ <li>Tests for verifying functionality of function AnnAddVectorMultipliedByValue.</li>
+ <li>Tests for verifying functionality of function AnnAddConvolution5x5Back.</li>
+ <li>Tests for verifying functionality of function AnnAddConvolution3x3Back.</li>
+ <li>Tests for verifying functionality of function AnnAddConvolution3x3Sum.</li>
+ <li>Tests for verifying functionality of function AnnAddConvolution5x5Sum.</li>
+</ul>
+
+<h4>Infrastructure</h4>
+<h5>New features</h5>
+<ul>
+ <li>Set MultiProcessorCompilation compiler option into True (MSVS specific).</li>
+ <li>Added SimdSse3 projects for Visual Studio and CMake.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R045">September 1, 2016 (version 3.1.45.767)</h3>
+
+<h4>Algorithms</h4>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Compiler error (MSVS 2015, Win32) in files SimdSse1Ann.cpp and SimdAvx1Ann.cpp.</li>
+ <li>Wrong definition of type Simd::Detection::View.</li>
+ <li>Compiler error (MSVS 2013) in files SimdBaseDetection.cpp, SimdSse41Detection.cpp and SimdAvx2Detection.cpp.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Error in tests of function AnnMax2x2.</li>
+ <li>Work threads are too busy when Detection does not work.</li>
+</ul>
+
+<h4>Infrastructure</h4>
+<h5>New features</h5>
+<ul>
+ <li>New structure of MSVS projects.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R044">August 5, 2016 (version 3.1.44.760)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Added method View::Swap.</li>
+</ul>
+
+<h5>Bug fixing</h5>
+<ul>
+ <li>Program crash in SSE4.1 version of functions DetectionLbpDetect16ip and DetectionLbpDetect16ii.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R043">July 1, 2016 (version 3.1.43.756)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnAddConvolution3x3.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnAddConvolution5x5.</li>
+ <li>Base implementation of function AnnTanh.</li>
+ <li>Base implementation, SSE1, AVX1 and NEON optimizations of function AnnRoughTanh.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnMax2x2.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function DerivativeSigmoid.</li>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function DerivativeTanh.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of function AnnAddConvolution3x3.</li>
+ <li>Tests for verifying functionality of function AnnAddConvolution5x5.</li>
+ <li>Tests for verifying functionality of function AnnTanh.</li>
+ <li>Tests for verifying functionality of function AnnRoughTanh.</li>
+ <li>Tests for verifying functionality of function AnnMax2x2.</li>
+ <li>Tests for verifying functionality of function DerivativeSigmoid.</li>
+ <li>Tests for verifying functionality of function DerivativeTanh.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R042">June 1, 2016 (version 3.1.42.748)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Base implementation, SSE1 and AVX1 optimizations of function AnnUpdateWeights.</li>
+ <li>Multithreading in Detection::Detect.</li>
+ <li>Rounding during conversion from float point to integer specializations of template classes Simd::Point<T> and Simd::Rectangle<T>.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Wrong using of motion mask in Detection::Detect.</li>
+ <li>Compiler error in View::OcvTo.</li>
+ <li>Compiler error in View::operator = (const cv::Mat &).</li>
+ <li>Linker warning in Simd::Detection.</li>
+ <li>Compiler error in Pyramid.</li>
+ <li>A loss of accuracy in function Base::SquaredDifferenceKahanSum32f (GCC specific).</li>
+ <li>Wrong checking of alignment in functions Sse2::AnnConvert, Avx2::AnnConvert and Neon::AnnConvert.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of function AnnUpdateWeights.</li>
+ <li>Parameter -r to set project root directory.</li>
+ <li>Parameter -pa to print alignment statistics.</li>
+ <li>Merged SSE4.1 and SSE4.2 performance statistics.</li>
+</ul>
+
+<h4>Documentation</h4>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Doxygen's description errors.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R041">May 2, 2016 (version 3.1.41.723)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>Integration of types Simd::Point and cv::Size_ and cv::Point_.</li>
+ <li>Integration of types Simd::Rectangle and cv::Rect_.</li>
+ <li>Integration of types Simd::View and cv::Mat.</li>
+ <li>Added operator += for Simd::Rectangle type.</li>
+ <li>Functions for loading, initialization and releasing of OpenCV classifier cascades.</li>
+ <li>Base implementation, SSE4.1 and AVX2 optimizations of function SimdDetectionHaarDetect32fp.</li>
+ <li>Base implementation, SSE4.1 and AVX2 optimizations of function SimdDetectionHaarDetect32fi.</li>
+ <li>Base implementation, SSE4.1 and AVX2 optimizations of function SimdDetectionLbpDetect32fp.</li>
+ <li>Base implementation, SSE4.1 and AVX2 optimizations of function SimdDetectionLbpDetect32fi.</li>
+ <li>Base implementation, SSE4.1 and AVX2 optimizations of function SimdDetectionLbpDetect16ip.</li>
+ <li>Base implementation, SSE4.1 and AVX2 optimizations of function SimdDetectionLbpDetect16ii.</li>
+ <li>Detection structure - wrapper around low-level API for object detection.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Compiler error in file SimdLoad.h on ARM platform.</li>
+ <li>Compiler error in file SimdLib.cpp on POWER platform.</li>
+ <li>Compiler error in file SimdAvx2ResizeBilinear.cpp on x86/x64 platform.</li>
+ <li>Compiler error in file SimdNeonAlphaBlending.cpp on Arm platform (for old versions of GCC).</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Saving and loading of View in PGM format.</li>
+ <li>Printing of help message.</li>
+ <li>Generation of test image with faces.</li>
+ <li>Tests for verifying functionality of function SimdDetectionHaarDetect32fp.</li>
+ <li>Tests for verifying functionality of function SimdDetectionHaarDetect32fi.</li>
+ <li>Tests for verifying functionality of function SimdDetectionLbpDetect32fp.</li>
+ <li>Tests for verifying functionality of function SimdDetectionLbpDetect32fi.</li>
+ <li>Tests for verifying functionality of function SimdDetectionLbpDetect16ip.</li>
+ <li>Tests for verifying functionality of function SimdDetectionLbpDetect16ii.</li>
+ <li>Tests for verifying functionality of Detection structure.</li>
+ <li>Multiple filters for tests.</li>
+</ul>
+
+<h4>Infrastructure</h4>
+<h5>New features</h5>
+<ul>
+ <li>Test images with faces.</li>
+ <li>OpenCV HAAR and LPB classifier cascades.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Compiler error in Test project for old CPUs.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R040">April 1, 2016 (version 3.0.40.699)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>NEON optimization of function InterferenceIncrement.</li>
+ <li>NEON optimization of function InterferenceDecrement.</li>
+ <li>NEON optimization of function InterferenceIncrementMasked.</li>
+ <li>NEON optimization of function InterferenceDecrementMasked.</li>
+ <li>NEON assembler optimization of function ReduceGray2x2.</li>
+ <li>Aligned memory allocation for MinGW (patch was sent by Sintegrial Technologies).</li>
+ <li>NEON optimization of function MeanFilter3x3.</li>
+ <li>NEON optimization of function AbsSecondDerivativeHistogram.</li>
+ <li>NEON optimization of function HistogramMasked.</li>
+ <li>NEON optimization of function SegmentationShrinkRegion.</li>
+ <li>Implementation of aligned loading/storing for NEON.</li>
+ <li>Software prefetch for NEON optimization.</li>
+ <li>NEON optimization of function FillBgr.</li>
+ <li>NEON optimization of function FillBgra.</li>
+ <li>NEON optimization of function BgraToBayer.</li>
+ <li>NEON optimization of function BgrToBayer.</li>
+ <li>NEON optimization of function Bgr48pToBgra32.</li>
+ <li>NEON optimization of function SvmSumLinear.</li>
+ <li>NEON optimization of function HogDirectionHistograms.</li>
+ <li>NEON optimization of function AnnProductSum.</li>
+ <li>NEON optimization of function AnnConvert.</li>
+ <li>NEON optimization of function AnnRoughSigmoid.</li>
+</ul>
+<h5>Improving</h5>
+<ul>
+ <li>Improving of NEON optimization of function SquaredDifferenceSum.</li>
+ <li>Improving of NEON optimization of function SquaredDifferenceSumMasked.</li>
+ <li>Improving of NEON optimization of function ReduceGray4x4.</li>
+ <li>Improving of NEON optimization of function AlphaBlending.</li>
+ <li>Improving of NEON optimization of function AddFeatureDifference.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of NEON version of function InterferenceIncrement.</li>
+ <li>Tests for verifying functionality of NEON version of function InterferenceDecrement.</li>
+ <li>Tests for verifying functionality of NEON version of function InterferenceIncrementMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function InterferenceDecrementMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function MeanFilter3x3.</li>
+ <li>Tests for verifying functionality of NEON version of function AbsSecondDerivativeHistogram.</li>
+ <li>Tests for verifying functionality of NEON version of function HistogramMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function SegmentationShrinkRegion.</li>
+ <li>Tests for verifying functionality of NEON version of function FillBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function FillBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function BgraToBayer.</li>
+ <li>Tests for verifying functionality of NEON version of function BgrToBayer.</li>
+ <li>Tests for verifying functionality of NEON version of function Bgr48pToBgra32.</li>
+ <li>Tests for verifying functionality of NEON version of function SvmSumLinear.</li>
+ <li>Tests for verifying functionality of NEON version of function HogDirectionHistograms.</li>
+ <li>Tests for verifying functionality of NEON version of function AnnProductSum.</li>
+ <li>Tests for verifying functionality of NEON version of function AnnConvert.</li>
+ <li>Tests for verifying functionality of NEON version of function AnnRoughSigmoid.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R039">March 2, 2016 (version 3.0.39.674)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>NEON optimization of function Laplace.</li>
+ <li>NEON optimization of function LaplaceAbs.</li>
+ <li>NEON optimization of function LaplaceAbsSum.</li>
+ <li>NEON optimization of function Yuv420pToBgra.</li>
+ <li>NEON optimization of function Yuv422pToBgra.</li>
+ <li>NEON optimization of function Yuv444pToBgra.</li>
+ <li>NEON optimization of function Yuv420pToBgr.</li>
+ <li>NEON optimization of function Yuv422pToBgr.</li>
+ <li>NEON optimization of function Yuv444pToBgr.</li>
+ <li>NEON optimization of function Yuv420pToHue.</li>
+ <li>NEON optimization of function Yuv444pToHue.</li>
+ <li>NEON optimization of function ShiftBilinear.</li>
+ <li>NEON optimization of function SobelDx.</li>
+ <li>NEON optimization of function SobelDy.</li>
+ <li>NEON optimization of function SobelDxAbs.</li>
+ <li>NEON optimization of function SobelDyAbs.</li>
+ <li>NEON optimization of function SobelDxAbsSum.</li>
+ <li>NEON optimization of function SobelDyAbsSum.</li>
+ <li>NEON optimization of function ContourMetrics.</li>
+ <li>NEON optimization of function ContourMetricsMasked.</li>
+ <li>NEON optimization of function ContourAnchors.</li>
+ <li>NEON optimization of function GetStatistic.</li>
+ <li>NEON optimization of function GetMoments.</li>
+ <li>NEON optimization of function GetRowSums.</li>
+ <li>NEON optimization of function GetColSums.</li>
+ <li>NEON optimization of function GetAbsDyRowSums.</li>
+ <li>NEON optimization of function GetAbsDxColSums.</li>
+ <li>NEON optimization of function ValueSum.</li>
+ <li>NEON optimization of function SquareSum.</li>
+ <li>NEON optimization of function CorrelationSum.</li>
+ <li>NEON optimization of function ResizeBilinear.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of NEON version of function Laplace.</li>
+ <li>Tests for verifying functionality of NEON version of function LaplaceAbs.</li>
+ <li>Tests for verifying functionality of NEON version of function LaplaceAbsSum.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv420pToBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv422pToBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv444pToBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv420pToBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv422pToBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv444pToBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv420pToHue.</li>
+ <li>Tests for verifying functionality of NEON version of function Yuv444pToHue.</li>
+ <li>Tests for verifying functionality of NEON version of function ShiftBilinear.</li>
+ <li>Tests for verifying functionality of NEON version of function SobelDx.</li>
+ <li>Tests for verifying functionality of NEON version of function SobelDy.</li>
+ <li>Tests for verifying functionality of NEON version of function SobelDxAbs.</li>
+ <li>Tests for verifying functionality of NEON version of function SobelDyAbs.</li>
+ <li>Tests for verifying functionality of NEON version of function SobelDxAbsSum.</li>
+ <li>Tests for verifying functionality of NEON version of function SobelDyAbsSum.</li>
+ <li>Tests for verifying functionality of NEON version of function ContourMetrics.</li>
+ <li>Tests for verifying functionality of NEON version of function ContourMetricsMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function ContourAnchors.</li>
+ <li>Tests for verifying functionality of NEON version of function GetStatistic.</li>
+ <li>Tests for verifying functionality of NEON version of function GetMoments.</li>
+ <li>Tests for verifying functionality of NEON version of function GetRowSums.</li>
+ <li>Tests for verifying functionality of NEON version of function GetColSums.</li>
+ <li>Tests for verifying functionality of NEON version of function GetAbsDyRowSums.</li>
+ <li>Tests for verifying functionality of NEON version of function GetAbsDxColSums.</li>
+ <li>Tests for verifying functionality of NEON version of function ValueSum.</li>
+ <li>Tests for verifying functionality of NEON version of function SquareSum.</li>
+ <li>Tests for verifying functionality of NEON version of function CorrelationSum.</li>
+ <li>Tests for verifying functionality of NEON version of function ResizeBilinear.</li>
+</ul>
+
+<h4>Infrastructure</h4>
+<h5>New features</h5>
+<ul>
+ <li>Release notes were divided by years.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R038">February 1, 2016 (version 3.0.38.640)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>NEON optimization of function AveragingBinarization.</li>
+ <li>NEON optimization of function BgraToYuv420p.</li>
+ <li>NEON optimization of function BgraToYuv422p.</li>
+ <li>NEON optimization of function BgraToYuv444p.</li>
+ <li>NEON optimization of function BgrToGray.</li>
+ <li>NEON optimization of function BgrToYuv420p.</li>
+ <li>NEON optimization of function BgrToYuv422p.</li>
+ <li>NEON optimization of function BgrToYuv444p.</li>
+ <li>NEON optimization of function BgraToBgr.</li>
+ <li>NEON optimization of function BgrToBgra.</li>
+ <li>NEON optimization of function LbpEstimate.</li>
+ <li>NEON optimization of function GrayToBgra.</li>
+ <li>NEON optimization of function GrayToBgr.</li>
+ <li>NEON optimization of function StretchGray2x2.</li>
+ <li>NEON optimization of function SquaredDifferenceSum.</li>
+ <li>NEON optimization of function SquaredDifferenceSumMasked.</li>
+ <li>NEON optimization of function SquaredDifferenceSum32f.</li>
+ <li>NEON optimization of function SquaredDifferenceKahanSum32f.</li>
+ <li>NEON optimization of function TextureBoostedSaturatedGradient.</li>
+ <li>NEON optimization of function TextureBoostedUv.</li>
+ <li>NEON optimization of function TextureGetDifferenceSum.</li>
+ <li>NEON optimization of function TexturePerformCompensation.</li>
+ <li>NEON optimization of function SegmentationChangeIndex.</li>
+ <li>NEON optimization of function SegmentationFillSingleHoles.</li>
+ <li>NEON optimization of function SegmentationPropagate2x2.</li>
+</ul>
+<h5>Improving</h5>
+<ul>
+ <li>Improving of NEON optimization of function ConditionalCount8u.</li>
+ <li>Improving of NEON optimization of function ConditionalSum.</li>
+ <li>Improving of NEON optimization of function ConditionalSquareSum.</li>
+ <li>Improving of NEON optimization of function ConditionalSquareGradientSum.</li>
+ <li>Improving of NEON optimization of function AbsDifferenceSum.</li>
+ <li>Improving of NEON optimization of function AbsDifferenceSumMasked.</li>
+ <li>Improving of NEON optimization of function AbsDifferenceSums3x3.</li>
+ <li>Improving of NEON optimization of function AbsDifferenceSums3x3Masked.</li>
+ <li>Improving of NEON optimization of function AbsGradientSaturatedSum.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of NEON version of function AveragingBinarization.</li>
+ <li>Tests for verifying functionality of NEON version of function BgraToYuv420p.</li>
+ <li>Tests for verifying functionality of NEON version of function BgraToYuv422p.</li>
+ <li>Tests for verifying functionality of NEON version of function BgraToYuv444p.</li>
+ <li>Tests for verifying functionality of NEON version of function BgraToGray.</li>
+ <li>Tests for verifying functionality of NEON version of function BgrToYuv420p.</li>
+ <li>Tests for verifying functionality of NEON version of function BgrToYuv422p.</li>
+ <li>Tests for verifying functionality of NEON version of function BgrToYuv444p.</li>
+ <li>Tests for verifying functionality of NEON version of function BgraToBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function BgrToBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function LbpEstimate.</li>
+ <li>Tests for verifying functionality of NEON version of function GrayToBgra.</li>
+ <li>Tests for verifying functionality of NEON version of function GrayToBgr.</li>
+ <li>Tests for verifying functionality of NEON version of function StretchGray2x2.</li>
+ <li>Tests for verifying functionality of NEON version of function SquaredDifferenceSum.</li>
+ <li>Tests for verifying functionality of NEON version of function SquaredDifferenceSumMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function SquaredDifferenceSum32f.</li>
+ <li>Tests for verifying functionality of NEON version of function SquaredDifferenceKahanSum32f.</li>
+ <li>Tests for verifying functionality of NEON version of function TextureBoostedSaturatedGradient.</li>
+ <li>Tests for verifying functionality of NEON version of function TextureBoostedUv.</li>
+ <li>Tests for verifying functionality of NEON version of function TextureGetDifferenceSum.</li>
+ <li>Tests for verifying functionality of NEON version of function TexturePerformCompensation.</li>
+ <li>Tests for verifying functionality of NEON version of function SegmentationChangeIndex.</li>
+ <li>Tests for verifying functionality of NEON version of function SegmentationFillSingleHoles.</li>
+ <li>Tests for verifying functionality of NEON version of function SegmentationPropagate2x2.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+<h3 id="R037">January 4, 2016 (version 3.0.37.612)</h3>
+
+<h4>Algorithms</h4>
+<h5>New features</h5>
+<ul>
+ <li>NEON optimization of function DeinterleaveUv.</li>
+ <li>NEON optimization of function InterleaveUv.</li>
+ <li>NEON optimization of function MedianFilterRhomb3x3.</li>
+ <li>NEON optimization of function MedianFilterRhomb5x5.</li>
+ <li>NEON optimization of function MedianFilterSquare3x3.</li>
+ <li>NEON optimization of function MedianFilterSquare5x5.</li>
+ <li>NEON optimization of function GaussianBlur3x3.</li>
+ <li>NEON optimization of function ReduceGray4x4.</li>
+ <li>NEON optimization of function ReduceGray3x3.</li>
+ <li>NEON optimization of function ReduceGray5x5.</li>
+ <li>NEON optimization of function BgraToGray.</li>
+ <li>NEON optimization of function BackgroundGrowRangeSlow.</li>
+ <li>NEON optimization of function BackgroundGrowRangeFast.</li>
+ <li>NEON optimization of function BackgroundIncrementCount.</li>
+ <li>NEON optimization of function BackgroundAdjustRange.</li>
+ <li>NEON optimization of function BackgroundAdjustRangeMasked.</li>
+ <li>NEON optimization of function BackgroundShiftRange.</li>
+ <li>NEON optimization of function BackgroundShiftRangeMasked.</li>
+ <li>NEON optimization of function BackgroundInitMask.</li>
+ <li>NEON optimization of function EdgeBackgroundGrowRangeSlow.</li>
+ <li>NEON optimization of function EdgeBackgroundGrowRangeFast.</li>
+ <li>NEON optimization of function EdgeBackgroundIncrementCount.</li>
+ <li>NEON optimization of function EdgeBackgroundAdjustRange.</li>
+ <li>NEON optimization of function EdgeBackgroundAdjustRangeMasked.</li>
+ <li>NEON optimization of function EdgeBackgroundShiftRange.</li>
+ <li>Improving of SSE2, AVX2 and VMX optimization of function EdgeBackgroundShiftRange.</li>
+ <li>NEON optimization of function EdgeBackgroundShiftRangeMasked.</li>
+ <li>NEON optimization of function ConditionalCount8u.</li>
+ <li>NEON optimization of function ConditionalCount16i.</li>
+ <li>Base implementation, SSE, AVX and VSX optimizations of function AnnProductSum.</li>
+ <li>Base implementation of function AnnSigmoid.</li>
+ <li>Base implementation, SSE, AVX and VSX optimizations of function AnnRoughSigmoid.</li>
+ <li>Base implementation, SSE2, AVX2 and VSX optimizations of function AnnConvert.</li>
+ <li>NEON optimization of function AddFeatureDifference.</li>
+ <li>NEON optimization of function ConditionalSum.</li>
+ <li>NEON optimization of function ConditionalSquareSum.</li>
+ <li>NEON optimization of function ConditionalSquareGradientSum.</li>
+ <li>NEON optimization of function ConditionalFill.</li>
+ <li>NEON optimization of function AbsDifferenceSum.</li>
+ <li>Additional parameters (flipped and timestamp) in Frame structure.</li>
+ <li>NEON optimization of function AbsDifferenceSumMasked.</li>
+ <li>NEON optimization of function AbsDifferenceSums3x3.</li>
+ <li>NEON optimization of function AbsDifferenceSums3x3Masked.</li>
+ <li>NEON optimization of function AbsGradientSaturatedSum.</li>
+ <li>NEON optimization of function AlphaBlending.</li>
+ <li>NEON optimization of function Binarization.</li>
+</ul>
+<h5>Bug fixing</h5>
+<ul>
+ <li>Wrong checking for minimal width in functions GaussianBlur3x3, MeanFilter3x3, MedianFilterRhomb3x3, MedianFilterSquare3x3, MedianFilterRhomb5x5, and MedianFilterSquare5x5.</li>
+ <li>Error in SSSE3 and AVX2 optimizations of function ResizeBilinear.</li>
+</ul>
+
+<h4>Test framework</h4>
+<h5>New features</h5>
+<ul>
+ <li>Tests for verifying functionality of NEON version of function DeinterleaveUv.</li>
+ <li>Tests for verifying functionality of NEON version of function InterleaveUv.</li>
+ <li>Tests for verifying functionality of NEON version of function MedianFilterRhomb3x3.</li>
+ <li>Tests for verifying functionality of NEON version of function MedianFilterRhomb5x5.</li>
+ <li>Tests for verifying functionality of NEON version of function MedianFilterSquare3x3.</li>
+ <li>Tests for verifying functionality of NEON version of function MedianFilterSquare5x5.</li>
+ <li>Tests for verifying functionality of NEON version of function GaussianBlur3x3.</li>
+ <li>Tests for verifying functionality of NEON version of function ReduceGray4x4.</li>
+ <li>Tests for verifying functionality of NEON version of function ReduceGray3x3.</li>
+ <li>Tests for verifying functionality of NEON version of function ReduceGray5x5.</li>
+ <li>Tests for verifying functionality of NEON version of function BgraToGray.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundGrowRangeSlow.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundGrowRangeFast.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundIncrementCount.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundAdjustRange.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundAdjustRangeMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundShiftRange.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundShiftRangeMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function BackgroundInitMask.</li>
+ <li>Tests for verifying functionality of NEON version of function EdgeBackgroundGrowRangeSlow.</li>
+ <li>Tests for verifying functionality of NEON version of function EdgeBackgroundGrowRangeFast.</li>
+ <li>Tests for verifying functionality of NEON version of function EdgeBackgroundIncrementCount.</li>
+ <li>Tests for verifying functionality of NEON version of function EdgeBackgroundAdjustRange.</li>
+ <li>Tests for verifying functionality of NEON version of function EdgeBackgroundAdjustRangeMasked.</li>
+ <li>Special tests for verifying functionality of SSSE3 and AVX2 optimizations of function ResizeBilinear</li>
+ <li>Tests for verifying functionality of NEON version of function EdgeBackgroundShiftRange.</li>
+ <li>Tests for verifying functionality of NEON version of function EdgeBackgroundShiftRangeMasked.</li>
+ <li>Improving performance of random filling of test data.</li>
+ <li>Tests for verifying functionality of NEON version of function ConditionalCount8u.</li>
+ <li>Tests for verifying functionality of NEON version of function ConditionalCount16i.</li>
+ <li>Tests for verifying functionality of function AnnProductSum.</li>
+ <li>Tests for verifying functionality of function AnnSigmoid.</li>
+ <li>Tests for verifying functionality of function AnnRoughSigmoid.</li>
+ <li>Tests for verifying functionality of function AnnConvert.</li>
+ <li>Tests for verifying functionality of NEON version of function AddFeatureDifference.</li>
+ <li>Tests for verifying functionality of NEON version of function ConditionalSum.</li>
+ <li>Tests for verifying functionality of NEON version of function ConditionalSquareSum.</li>
+ <li>Tests for verifying functionality of NEON version of function ConditionalSquareGradientSum.</li>
+ <li>Tests for verifying functionality of NEON version of function ConditionalFill.</li>
+ <li>Tests for verifying functionality of NEON version of function AbsDifferenceSum.</li>
+ <li>Tests for verifying functionality of NEON version of function AbsDifferenceSumMasked.</li>
+ <li>Tests for verifying functionality of NEON version of function AbsDifferenceSums3x3.</li>
+ <li>Tests for verifying functionality of NEON version of function AbsDifferenceSums3x3Masked.</li>
+ <li>Tests for verifying functionality of NEON version of function AbsGradientSaturatedSum.</li>
+ <li>Tests for verifying functionality of NEON version of function AlphaBlending.</li>
+ <li>Tests for verifying functionality of NEON version of function Binarization.</li>
+</ul>
+
+<a href="#HOME">Home</a> 
+<hr/> 
+
+<center>
+ <a href="2017.html">2017</a> | 
+ <a href="2016.html">2016</a> | 
+ <a href="2015.html">2015</a> |
+ <a href="2014.html">2014</a> |
+ <a href="2013.html">2013</a>
+</center>
+
+<hr/> 
+
+</td> </tr> </table> </center> </body> </html>

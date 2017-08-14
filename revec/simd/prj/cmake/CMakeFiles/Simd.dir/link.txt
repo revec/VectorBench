@@ -1,0 +1,2 @@
+/usr/bin/ar cr libSimd.a  CMakeFiles/Simd.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Simd/SimdLib.cpp.o
+/usr/bin/ranlib libSimd.a

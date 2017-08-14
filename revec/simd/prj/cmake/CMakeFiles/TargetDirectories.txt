@@ -1,0 +1,12 @@
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/Simd.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdAvx1.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdAvx2.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdBase.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdSse1.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdSse2.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdSse3.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdSse41.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdSse42.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/SimdSsse3.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/Test.dir
+/data/scratch/charithm/projects/revec/regression_tests/simd/prj/cmake/CMakeFiles/TestCheckC.dir

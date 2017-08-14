@@ -1,0 +1,2 @@
+/usr/bin/ar cr libTestCheckC.a  CMakeFiles/TestCheckC.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Test/TestCheckC.c.o
+/usr/bin/ranlib libTestCheckC.a

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../src/Simd/SimdConfig.h
+
+../../src/Simd/SimdLib.h
+Simd/SimdConfig.h
+../../src/Simd/Simd/SimdConfig.h
+stddef.h
+-
+stdint.h
+-
+
+/data/scratch/charithm/projects/revec/regression_tests/simd/src/Test/TestCheckC.c
+Simd/SimdLib.h
+/data/scratch/charithm/projects/revec/regression_tests/simd/src/Test/Simd/SimdLib.h
+

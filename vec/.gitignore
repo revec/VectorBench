@@ -1,6 +1,5 @@
-*
-!.gitignore
-!NP*/
-!NP*/*
-!run.sh
-!scripts/
+*~
+cpu*
+spec*/
+spec*
+bin/

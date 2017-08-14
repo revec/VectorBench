@@ -1,0 +1,2 @@
+/usr/bin/ar cr libSimdSse42.a  CMakeFiles/SimdSse42.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Simd/SimdSse42Crc32.cpp.o
+/usr/bin/ranlib libSimdSse42.a

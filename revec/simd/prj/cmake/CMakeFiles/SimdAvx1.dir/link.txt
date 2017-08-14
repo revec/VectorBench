@@ -1,0 +1,2 @@
+/usr/bin/ar cr libSimdAvx1.a  CMakeFiles/SimdAvx1.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Simd/SimdAvx1Svm.cpp.o CMakeFiles/SimdAvx1.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Simd/SimdAvx1SquaredDifferenceSum.cpp.o CMakeFiles/SimdAvx1.dir/data/scratch/charithm/projects/revec/regression_tests/simd/src/Simd/SimdAvx1Neural.cpp.o
+/usr/bin/ranlib libSimdAvx1.a
