@@ -6,7 +6,7 @@ reset=`tput sgr0`
 cur_dir="$(pwd)"
 
    
-if [ "$COMP_BUILD" != "" ]; then
+if [ "$COMP_BUILD" != "0" ]; then
     if [ "$COMP_BUILD_DIR" == "" ] || [ "$COMP_SRC_DIR" == "" ]; then
 	echo "error : specify llvm compiler src and build directories to build llvm"
 	exit
@@ -19,6 +19,9 @@ fi
 if ([ -f $COMP_BUILD_DIR/bin/clang ]) && ([ -f $COMP_BUILD_DIR/bin/clang++ ]); then
     export CC="$COMP_BUILD_DIR/bin/clang"
     export CXX="$COMP_BUILD_DIR/bin/clang++"
+    echo $CC
+    echo $CXX
+    sleep 10
 else
     echo "warning clang or clang++ not found not setting CC or CXX variables"
     sleep 10

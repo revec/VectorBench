@@ -16,24 +16,27 @@ if [ "$1" == "spec2006" ]; then
     echo "${red}running spec2006 benchmarks${reset}"
     cd spec2006-install
     . ./shrc
-    runspec --config=mac-gcc.cfg --action=scrub --tune=base all
+    echo $CC
+    echo $CXX
+    sleep 10
+    CC1=$CC CXX1=$CXX runspec --config=mac-gcc.cfg --action=scrub --tune=base all
     for bench in $spec2006bench; do
-	runspec --config=mac-gcc.cfg --action=build --tune=base $bench
+	CC=$CC CXX=$CXX runspec --config=mac-gcc.cfg --action=build --tune=base $bench
     done
     for bench in $spec2006bench; do
-	runspec --config=mac-gcc.cfg --action=run --noreportable --tune=base --size=test $bench
+	CC=$CC CXX=$CXX runspec --config=mac-gcc.cfg --action=run --noreportable --tune=base --size=test $bench
     done
     
 elif [ "$1" == "spec2017" ]; then
     echo "${red}running spec2017 benchmarks${reset}"
     cd spec2017-install
     . ./shrc
-    runcpu --config=mac-gcc.cfg --action=scrub --tune=base all
+    CC=$CC CXX=$CXX runcpu --config=mac-gcc.cfg --action=scrub --tune=base all
     for bench in $spec2017bench; do
-	runcpu --config=mac-gcc.cfg --action=build --tune=base $bench
+	CC=$CC CXX=$CXX runcpu --config=mac-gcc.cfg --action=build --tune=base $bench
     done
     for bench in $spec2017bench; do
-	runcpu --config=mac-gcc.cfg --action=run --noreportable --tune=base --size=test $bench
+	CC=$CC CXX=$CXX runcpu --config=mac-gcc.cfg --action=run --noreportable --tune=base --size=test $bench
     done
 
 elif [ "$1" == "nas" ]; then

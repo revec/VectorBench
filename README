@@ -15,10 +15,10 @@ steps
 1. Download the repo
 2. Download the relevant benchmarks - which are not included
    
-	spec2006 - not included - install it in vec/spec2006-install
-	spec2017 - not included - install it in vec/spec2017-install
+	spec2006 - not included - install it in vec/spec2006-install - mac-gcc.cfg used as the config change it in the run.sh file
+	spec2017 - not included - install it in vec/spec2017-install - mac-gcc.cfg used as the config change it in the run.sh file
 	simd - included
-	nas - included
+	nas - included - remember to create the bin directory though
 
 3. compile and run the benchmarks - you can build llvm or point to clang that is already built
    use run.sh for this (./run.sh <suite> <bench>)
