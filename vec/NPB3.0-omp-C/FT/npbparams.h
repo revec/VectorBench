@@ -11,7 +11,7 @@ c  in this directory. Do not modify it by hand.
 #define	NITER_DEFAULT	6
 #define	NTOTAL	8388608
 #define	CONVERTDOUBLE	FALSE
-#define COMPILETIME "13 Aug 2017"
+#define COMPILETIME "14 Aug 2017"
 #define NPBVERSION "3.0 structured"
 #define CS1 "(none)"
 #define CS2 "(none)"
