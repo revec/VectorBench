@@ -1,0 +1,9 @@
+*
+!compiler.sh
+!run.sh
+!.gitignore
+!README
+!revec/*
+!vec/*
+!revec/
+!vec/

@@ -1,0 +1,38 @@
+environment variables to set
+
+mandatory - if building and want to use pre-built clang
+COMP_SRC_DIR - where llvm srcs are to be downloaded / or are already downloaded
+COMP_BUILD_DIR - where llvm should be build / or where it is already built
+
+optional - for automatically building llvm
+COMP_BUILD = 1/0 - this builds llvm using the environment variables above - default 0
+COMP_GENERATE = 1/0 - if COMP_BUILD = 1; this can be used to control whether CMake should be run again - default 1
+COMP_VERSION = Release or debug - if generate is not 0 then this would be used to build the specified version of the project - default Release
+
+
+steps
+
+1. Download the repo
+2. Download the relevant benchmarks - which are not included
+   
+	spec2006 - not included - install it in vec/spec2006-install
+	spec2017 - not included - install it in vec/spec2017-install
+	simd - included
+	nas - included
+
+3. compile and run the benchmarks - you can build llvm or point to clang that is already built
+   use run.sh for this (./run.sh <suite> <bench>)
+   
+   if building llvm in benchmarks folder
+      *COMP_SRC_DIR=<src> COMP_BUILD_DIR=<build> COMP_BUILD=1 COMP_GENERATE=1 ./run.sh <suite> <bench>
+      *This would ask you to place CPLEX binaries in the correct place. Download and place CPLEX in COMP_SRC_DIR/libraries/cplex and remember to strip
+       platform info from x86_64* folders (e.g., rename x86_64_linux to x86_64)
+      *COMP_SRC_DIR=<src> COMP_BUILD_DIR=<build> COMP_BUILD=1 ./run.sh <suite> <bench>
+   else
+      *COMP_SRC_DIR=<src> COMP_BUILD_DIR=<build> ./run.sh <suite> <bench>
+
+   for nightly builds and tests use COMP_BUILD=1 and COMP_GENERATE=1
+   suites - vec, revec
+   bench
+	vec - spec2006, spec2017, nas
+	revec - simd
