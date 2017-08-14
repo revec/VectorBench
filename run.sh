@@ -5,6 +5,9 @@ reset=`tput sgr0`
 
 cur_dir="$(pwd)"
 
+if [ "$CMAKE" == "" ]; then
+    CMAKE=cmake
+fi
    
 if [ "$COMP_BUILD" != "0" ]; then
     if [ "$COMP_BUILD_DIR" == "" ] || [ "$COMP_SRC_DIR" == "" ]; then
