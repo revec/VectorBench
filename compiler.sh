@@ -32,7 +32,7 @@ cd $COMP_BUILD_DIR
 if [ "$COMP_GENERATE" != "0" ]; then
     DARWIN=`expr "$(uname -a)" : '.*\(Darwin\).*'`
     LINUX=`expr "$(uname -a)" : '.*\(Linux\).*'`
-    if [ "$DARWIN" == ""] && [ "$LINUX" == "" ]; then
+    if [ "$DARWIN" == "" ] && [ "$LINUX" == "" ]; then
 	echo "Unknown system cannot run cmake"
 	exit
     fi
