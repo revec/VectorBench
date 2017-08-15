@@ -20,12 +20,12 @@ if [ "$1" == "spec2006" ]; then
 	echo "error specify spec2006 config using env var SPEC2006_CONFIG"
 	exit
     fi
-    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --tune=base all
+    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --tune=peak all
     for bench in $spec2006bench; do
-	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=build --tune=base $bench
+	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=build --tune=peak $bench
     done
     for bench in $spec2006bench; do
-	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --noreportable --tune=base --size=test $bench
+	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --noreportable --tune=peak --size=ref $bench
     done
     
 elif [ "$1" == "spec2017" ]; then
@@ -36,12 +36,12 @@ elif [ "$1" == "spec2017" ]; then
 	echo "error specify spec2017 config using env var SPEC2017_CONFIG"
 	exit
     fi
-    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --tune=base all
+    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --tune=peak all
     for bench in $spec2017bench; do
-	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=build --tune=base $bench
+	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=build --tune=peak $bench
     done
     for bench in $spec2017bench; do
-	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --noreportable --tune=base --size=test $bench
+	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --noreportable --tune=peak --size=ref $bench
     done
 
 elif [ "$1" == "nas" ]; then

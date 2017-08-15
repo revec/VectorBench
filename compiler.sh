@@ -44,9 +44,11 @@ if [ "$COMP_GENERATE" != "0" ]; then
 	sleep 10
     fi
     if [ "$DARWIN" != "" ]; then
+	echo "building for apple...."
 	$CMAKE -DLLVM_TARGETS_TO_BUILD=X86 -DC_INCLUDE_DIRS="/Library/Developer/CommandLineTools/usr/bin/../../usr/include/c++/v1:/Library/Developer/CommandLineTools/usr/bin/../../usr/include:/usr/include" -DLLVM_ENABLE_LIBCXX=ON -DLLVM_ENABLE_EH=ON -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE=$COMP_VERSION $COMP_SRC_DIR
     fi
     if [ "$LINUX" != "" ]; then
+	echo "building for linux..."
 	$CMAKE -DLLVM_TARGETS_TO_BUILD=X86 -DLLVM_ENABLE_EH=ON -DLLVM_ENABLE_RTTI=ON -DCMAKE_BUILD_TYPE=$COMP_VERSION $COMP_SRC_DIR
     fi
 fi
