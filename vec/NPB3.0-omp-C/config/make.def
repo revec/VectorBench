@@ -101,7 +101,7 @@ CFLAGS	= -O3
 # Global *link time* flags. Flags for increasing maximum executable 
 # size usually go here. 
 #---------------------------------------------------------------------------
-CLINKFLAGS =
+CLINKFLAGS = -lm
 
 
 #---------------------------------------------------------------------------

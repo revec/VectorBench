@@ -12,7 +12,7 @@ all: setparams
 # was compiled and linked
 
 setparams: setparams.c ../config/make.def
-	$(UCC) -o setparams setparams.c
+	$(CC) -o setparams setparams.c
 
 
 clean: 
