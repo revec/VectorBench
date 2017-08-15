@@ -4,7 +4,7 @@
    It sets the number of processors and the class of the NPB
    in this directory. Do not modify it by hand.   */
    
-#define COMPILETIME "14 Aug 2017"
+#define COMPILETIME "15 Aug 2017"
 #define NPBVERSION "3.0 structured"
 #define CC "(none)"
 #define CFLAGS "-O3 "

@@ -79,7 +79,7 @@ FLINKFLAGS =
 #---------------------------------------------------------------------------
 CC ?= cc
 # This links C programs; usually the same as ${CC}
-CLINK	?= cc
+CLINK ?= cc
 
 #---------------------------------------------------------------------------
 # These macros are passed to the linker 
