@@ -11,6 +11,7 @@ if [ "$1" == "simd" ]; then
     cd simd
     exec=clang
     EXEC=$exec make clean
+    mkdir -p execs_$exec
     cp -r data execs_$exec/
     test_files=""
     for test_file in test/*.cpp; do
