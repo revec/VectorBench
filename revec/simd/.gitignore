@@ -2,4 +2,3 @@ execs_*/*
 execs/*
 .deps/
 .libs/
-Data/*
