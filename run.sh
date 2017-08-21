@@ -36,8 +36,8 @@ fi
 if [ "$1" == "all" ]; then
    cd vec  
    echo "${red}running all vector benchmarks${reset}"
-   ./run.sh "spec2006"
-   ./run.sh "spec2017"
+   ./run.sh "spec2006" "test"
+   ./run.sh "spec2017" "test"
    ./run.sh "nas"
    cd $cur_dir
    cd revec
@@ -48,11 +48,11 @@ elif [ "$1" == "vec" ]; then
     cd vec
     if [ "$2" == "" ]; then
 	echo "${red}running all vector benchmarks${reset}"
-	./run.sh "spec2006"
-	./run.sh "spec2017"
+	./run.sh "spec2006" "test" 
+	./run.sh "spec2017" "test"
 	./run.sh "nas"
     else
-	./run.sh "$2"
+	./run.sh "$2" "$3" "$4"
     fi
     cd $cur_dir
 elif [ "$1" == "revec" ]; then

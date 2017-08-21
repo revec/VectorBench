@@ -20,13 +20,18 @@ if [ "$1" == "spec2006" ]; then
 	echo "error specify spec2006 config using env var SPEC2006_CONFIG"
 	exit
     fi
-    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --tune=peak all
-    for bench in $spec2006bench; do
-	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=build --tune=peak $bench
-    done
-    for bench in $spec2006bench; do
-	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --noreportable --tune=peak --size=ref $bench
-    done
+    if [ "$3" == "" ]; then
+	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --tune=peak all
+	for bench in $spec2006bench; do
+	    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=build --tune=peak $bench
+	done
+	for bench in $spec2006bench; do
+	    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --noreportable --tune=peak --size=$2 $bench
+	done
+    else
+	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --tune=peak $3
+	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --noreportable --tune=peak --size=$2 $3
+    fi
     
 elif [ "$1" == "spec2017" ]; then
     echo "${red}running spec2017 benchmarks${reset}"
@@ -36,13 +41,19 @@ elif [ "$1" == "spec2017" ]; then
 	echo "error specify spec2017 config using env var SPEC2017_CONFIG"
 	exit
     fi
-    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --tune=peak all
-    for bench in $spec2017bench; do
-	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=build --tune=peak $bench
-    done
-    for bench in $spec2017bench; do
-	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --noreportable --tune=peak --size=ref $bench
-    done
+    if [ "$3" == "" ]; then
+	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --tune=peak all
+	for bench in $spec2017bench; do
+	    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=build --tune=peak $bench
+	done
+	for bench in $spec2017bench; do
+	    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --noreportable --tune=peak --size=$2 $bench
+	done
+    else
+	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --tune=peak $3
+	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --noreportable --tune=peak --size=$2 $3
+    fi
+
 
 elif [ "$1" == "nas" ]; then
     echo "${red}running nas benchmarks${reset}"
