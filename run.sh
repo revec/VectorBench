@@ -14,7 +14,18 @@ if [ "$COMP_BUILD" != "0" ]; then
 	echo "error : specify llvm compiler src and build directories to build llvm"
 	exit
     fi
+    #specify here the compiler used for building clang
+    
+    CCPrev=$CC
+    CXXPrev=$CXX
+    
+    CC=/usr/bin/gcc #using the gcc that is built into the system
+    CXX=/usr/bin/g++ #using the g++ that is built into the system
+    
     source compiler.sh
+    
+    CC=$CCPrev
+    CXX=$CXXPrev
     cd $cur_dir
 fi
 
@@ -26,18 +37,20 @@ if ([ -f $COMP_BUILD_DIR/bin/clang ]) && ([ -f $COMP_BUILD_DIR/bin/clang++ ]); t
     echo "${red}clang found${reset}"
     echo $CC
     echo $CXX
-    sleep 10
+    sleep 2
 else
     echo "warning clang or clang++ not found not setting CC or CXX variables"
-    sleep 10
+    echo $CC
+    echo $CXX
+    sleep 2
 fi
 
 
 if [ "$1" == "all" ]; then
    cd vec  
    echo "${red}running all vector benchmarks${reset}"
-   ./run.sh "spec2006" "test"
-   ./run.sh "spec2017" "test"
+   ./run.sh "spec2006"
+   ./run.sh "spec2017"
    ./run.sh "nas"
    cd $cur_dir
    cd revec
@@ -48,8 +61,8 @@ elif [ "$1" == "vec" ]; then
     cd vec
     if [ "$2" == "" ]; then
 	echo "${red}running all vector benchmarks${reset}"
-	./run.sh "spec2006" "test" 
-	./run.sh "spec2017" "test"
+	./run.sh "spec2006" 
+	./run.sh "spec2017"
 	./run.sh "nas"
     else
 	./run.sh "$2" "$3" "$4"
@@ -61,7 +74,7 @@ elif [ "$1" == "revec" ]; then
 	echo "${red}running all revectorization benchmarks${reset}"
 	./run.sh "simd"
     else
-	./run.sh "$2"
+	./run.sh "$2" "$3"
     fi
     cd $cur_dir
 fi

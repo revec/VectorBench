@@ -20,14 +20,9 @@ if [ "$1" == "spec2006" ]; then
 	echo "error specify spec2006 config using env var SPEC2006_CONFIG"
 	exit
     fi
-    if [ "$3" == "" ]; then
+    if [ "$3" == "" ]; then #if you don't specify a benchmark then we will run all as a reportable run
 	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --tune=peak all
-	for bench in $spec2006bench; do
-	    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=build --tune=peak $bench
-	done
-	for bench in $spec2006bench; do
-	    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --noreportable --tune=peak --size=$2 $bench
-	done
+	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --reportable --tune=peak all
     else
 	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --tune=peak $3
 	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=run --noreportable --tune=peak --size=$2 $3
@@ -41,14 +36,9 @@ elif [ "$1" == "spec2017" ]; then
 	echo "error specify spec2017 config using env var SPEC2017_CONFIG"
 	exit
     fi
-    if [ "$3" == "" ]; then
+    if [ "$3" == "" ]; then #if you don't specify a benchmark then we will run all as a reportable run
 	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --tune=peak all
-	for bench in $spec2017bench; do
-	    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=build --tune=peak $bench
-	done
-	for bench in $spec2017bench; do
-	    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --noreportable --tune=peak --size=$2 $bench
-	done
+	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --reportable --tune=peak all
     else
 	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --tune=peak $3
 	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=run --noreportable --tune=peak --size=$2 $3
@@ -60,11 +50,16 @@ elif [ "$1" == "nas" ]; then
     cd NPB3.0-omp-C
     mkdir -p bin
     make clean
+    if [ "$2" == "" ]; then #we are running class A benchmarks
+	CLASS=A
+    else
+	CLASS=$2
+    fi
     for bench in $nas; do
-	make $bench CLASS=A
+	make $bench CLASS=$CLASS
     done
     for bench in $nas; do
-	./bin/$bench.A
+	./bin/$bench.$CLASS
     done
 fi
 

@@ -9,7 +9,12 @@ cur_dir="$(pwd)"
 if [ "$1" == "simd" ]; then
     echo "${red}running simd benchmarks${reset}"
     cd simd
-    exec=clang
+
+    if [ "$2" == "" ]; then # we assume a default compiler in this case
+	exec="default"
+    else
+	exec=$2
+    fi
     EXEC=$exec make clean
     mkdir -p execs_$exec
     cp -r data execs_$exec/
