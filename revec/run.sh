@@ -29,7 +29,7 @@ if [ "$1" == "simd" ]; then
 	if [ "$avx2" != "" ]; then
 	    file=$avx2
 	elif [ "$avx1" != "" ]; then
-	    file=$avx2
+	    file=$avx1
 	elif [ "$sse2" != "" ]; then
 	    file=$sse2
 	elif [ "$ssse3" != "" ]; then
@@ -46,6 +46,7 @@ if [ "$1" == "simd" ]; then
     done
 
     for test_file in $test_files; do
+	echo "running $test_file"
 	./$test_file
     done
     

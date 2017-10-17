@@ -21,7 +21,7 @@ include ../sys/make.common
 # header.h: npbparams.h
 
 ${PROGRAM}: config ${OBJS}
-	${CLINK} ${CLINKFLAGS} -o ${PROGRAM} ${OBJS} ${C_LIB}
+	${CLINK} ${CLINKFLAGS} -o ${PROGRAM} ${OBJS} ${C_LIB} 
 
 .c.o:
 	${CCOMPILE} $<

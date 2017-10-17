@@ -65,7 +65,7 @@ elif [ "$1" == "vec" ]; then
 	./run.sh "spec2017"
 	./run.sh "nas"
     else
-	./run.sh "$2" "$3" "$4"
+	./run.sh "$2" "$3" "$4" "$5"
     fi
     cd $cur_dir
 elif [ "$1" == "revec" ]; then
@@ -74,7 +74,7 @@ elif [ "$1" == "revec" ]; then
 	echo "${red}running all revectorization benchmarks${reset}"
 	./run.sh "simd"
     else
-	./run.sh "$2" "$3"
+	./run.sh "$2" "$3" "$4"
     fi
     cd $cur_dir
 fi

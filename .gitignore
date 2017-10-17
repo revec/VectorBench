@@ -6,3 +6,9 @@ llvm-src/
 test.cpp
 out*.txt
 logs/
+*.ll
+*.optrpt
+*.o
+*.s
+*.o*
+*#*#

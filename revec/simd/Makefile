@@ -1,6 +1,6 @@
 CXX ?= g++
-CXXFLAGS ?= -mavx2 -mfma -O3 -std=c++11 -DNDEBUG
-LDFLAGS ?= -lm -lpthread
+CXXFLAGS += -march=core-avx2 -mavx2 -mfma -O3 -std=c++11 -DNDEBUG
+LDFLAGS += -lm -lpthread
 
 CUR_DIR = 
 SRC_DIR = source
