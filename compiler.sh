@@ -10,6 +10,9 @@ CUR_DIR=$(pwd)
 #get the repo
 if !([ -d "$COMP_SRC_DIR" ]); then
     git clone git@github.mit.edu:charithm/llvm-revec.git $COMP_SRC_DIR
+    cd $COMP_SRC_DIR
+    git checkout revec-vecins
+    git pull
     cd $COMP_SRC_DIR/tools
     git clone https://github.com/llvm-mirror/clang.git
     cd clang
@@ -53,7 +56,7 @@ if [ "$COMP_GENERATE" != "0" ]; then
     fi
 fi
 
-make -j 4 clang
+make -j 24 clang
 if !([ -f $COMP_BUILD_DIR/bin/clang ]) || !([ -f $COMP_BUILD_DIR/bin/clang++ ]); then
     echo "clang not built successfully"
     exit
