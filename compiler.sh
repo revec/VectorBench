@@ -5,6 +5,7 @@ if [ "$COMP_BUILD_DIR" == "" ] || [ "$COMP_SRC_DIR" == "" ]; then
     exit
 fi
 
+
 CUR_DIR=$(pwd)
 
 #get the repo

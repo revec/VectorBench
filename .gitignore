@@ -12,3 +12,10 @@ logs/
 *.s
 *.o*
 *#*#
+builds/
+outputs/
+output/
+
+*.sh
+!compiler.sh
+!run.sh

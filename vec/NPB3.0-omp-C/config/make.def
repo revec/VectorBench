@@ -77,9 +77,8 @@ FLINKFLAGS =
 #---------------------------------------------------------------------------
 # This is the C compiler used for OpenMP programs
 #---------------------------------------------------------------------------
-CC ?= cc
-# This links C programs; usually the same as ${CC}
-CLINK ?= cc
+#CC = ${CC}
+CLINK = ${CC}
 
 #---------------------------------------------------------------------------
 # These macros are passed to the linker 
@@ -94,7 +93,7 @@ C_INC += -I../common
 #---------------------------------------------------------------------------
 # Global *compile time* flags for C programs
 #---------------------------------------------------------------------------
-CFLAGS	+= -march=native
+CFLAGS	= -O3 -march=native ${CFLAGS1}
 #CFLAGS  += -march=core-avx2
 # CFLAGS = -g
 

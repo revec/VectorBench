@@ -6,6 +6,7 @@ reset=`tput sgr0`
 cur_dir="$(pwd)"
 
 
+
 if [ "$1" == "simd" ]; then
     echo "${red}running simd benchmarks${reset}"
     cd simd
