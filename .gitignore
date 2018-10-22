@@ -17,5 +17,5 @@ outputs/
 output/
 
 *.sh
-!compiler.sh
-!run.sh
+!build_llvm.sh
+!run_bench.sh
