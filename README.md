@@ -12,16 +12,16 @@ Benchmarks are mainly divided into two categories, namely scalar (non hand-vecto
 
 ## scalar benchmarks
 
-1. SPEC2006 - Purchase [link](https://www.spec.org/cpu2006/) and install at scalar/spec2006-install
-2. SPEC2017 - Purchase [link](https://www.spec.org/cpu2017/) and install at scalar/spec2017-install
-3. NAS - C port of NAS Parallel Benchmarks [link](https://github.com/benchmark-subsetting/NPB3.0-omp-C) included under scalar/NPB3.0-omp-C
+1. SPEC2006 - Purchase [(link)](https://www.spec.org/cpu2006/) and install at scalar/spec2006-install
+2. SPEC2017 - Purchase [(link)](https://www.spec.org/cpu2017/) and install at scalar/spec2017-install
+3. NAS - C port of NAS Parallel Benchmarks [(link)](https://github.com/benchmark-subsetting/NPB3.0-omp-C) included under scalar/NPB3.0-omp-C
 
 ## vector benchmarks
 
-1. Simd library - image processing and stencil benchmarks [link](https://github.com/ermig1979/Simd) included under vector/Simd. We have seperated testing of each kernel
+1. Simd library - image processing and stencil benchmarks ([link])(https://github.com/ermig1979/Simd) included under vector/Simd. We have seperated testing of each kernel
 into its own file. The kernels remain unmodified from the original benchmark suite.
-2. x265 - contains kernels extracted from x265 encoding and decoding library [link](https://bitbucket.org/multicoreware/x265/wiki/Home) included under vector/x265
-3. FastPFor - contains kernels from the popular integer packing library [link](https://github.com/lemire/FastPFor) included under vector/FastPFor
+2. x265 - contains kernels extracted from x265 encoding and decoding library ([link])(https://bitbucket.org/multicoreware/x265/wiki/Home) included under vector/x265
+3. FastPFor - contains kernels from the popular integer packing library ([link])(https://github.com/lemire/FastPFor) included under vector/FastPFor
 
 # Building and running benchmarks
 
