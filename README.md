@@ -34,6 +34,7 @@ You need to set the following environment variables to point to the compilers, f
 * CFLAGS - additional C compiler flags
 * CXXFLAGS - additional C++ compiler flags
 * FFLAGS - additional Fortran compiler flags
+* CMAKE - cmake binary (optional)
 
 Following are SPEC benchmark related variables you should set.
 
@@ -49,19 +50,23 @@ where,
 * action - build/run
 * suite_type - vector/scalar
 * bench_suite - for scalar this can be spec2006/spec2017/nas; for vector this can be simd/x265/pfor
-* individual_bench - only avaiable for SPEC benchmarks; you can specify an individual benchmark name; if not specified it runs all benchmarks for the given SPEC variant.
+* individual_bench - only avaiable for SPEC benchmarks; you can specify an individual benchmark name; if not specified it runs all benchmarks for the given SPEC variant. For other suites pass an empty string.
 
-Additional positional arguments for benchmark suites
+Additional positional arguments for benchmark suites in order
 
-* SPEC2006/SPEC2017 - in positional order (all should be supplied)
+* SPEC2006/SPEC2017
   * tune - peak/base
   * size - ref/train/test
+* NAS
+  * class - A,B,W etc.
+* Simd
+  * executable directory
 
 Special invocations to run a specific subset of benchmarks
 
-* `./run_bench.sh all` - runs all benchmarks
-* `./run_bench.sh vector` - runs all vector benchmarks
-* `./run_bench.sh scalar` - runs all scalar benchmarks
+* `./run_bench.sh <action> all` - runs all benchmarks
+* `./run_bench.sh <action> vector` - runs all vector benchmarks
+* `./run_bench.sh <action> scalar` - runs all scalar benchmarks
 
 # Sample config files
 
