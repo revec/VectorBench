@@ -18,10 +18,10 @@ Benchmarks are mainly divided into two categories, namely scalar (non hand-vecto
 
 ## vector benchmarks
 
-1. Simd library - image processing and stencil benchmarks ([link])(https://github.com/ermig1979/Simd) included under vector/Simd. We have seperated testing of each kernel
+1. Simd library - image processing and stencil benchmarks [(link)](https://github.com/ermig1979/Simd) included under vector/Simd. We have seperated testing of each kernel
 into its own file. The kernels remain unmodified from the original benchmark suite.
-2. x265 - contains kernels extracted from x265 encoding and decoding library ([link])(https://bitbucket.org/multicoreware/x265/wiki/Home) included under vector/x265
-3. FastPFor - contains kernels from the popular integer packing library ([link])(https://github.com/lemire/FastPFor) included under vector/FastPFor
+2. x265 - contains kernels extracted from x265 encoding and decoding library [(link)](https://bitbucket.org/multicoreware/x265/wiki/Home) included under vector/x265
+3. FastPFor - contains kernels from the popular integer packing library [(link)](https://github.com/lemire/FastPFor) included under vector/FastPFor
 
 # Building and running benchmarks
 
