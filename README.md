@@ -25,7 +25,7 @@ into its own file. The kernels remain unmodified from the original benchmark sui
 
 # Building and running benchmarks
 
-Use the convenience script run_bench.sh to run any benchmark of your choosing or entire suites.
+Use the convenience script run_bench.sh to build and/or run any benchmark of your choosing or entire suites.
 You need to set the following environment variables to point to the compilers, flags, config files etc. that you want to use during building and running the benchmarks.
 
 * CC - C Compiler binary
@@ -71,4 +71,5 @@ If you opt to use these config files, note that we use internal environment vari
 CC1, CXX1, FC1 to transfer the compilers you set by environment variables
 CC, CXX, FC to the config script. You are free to modify these config files keeping this fact
 in mind. If you use your own config files, the values set by the environment variables CC, CXX
-and FC will be ignored and you will need to manually edit the file.
+and FC will be ignored and you will need to manually edit the file to point to the compilers
+you wish to test.
