@@ -22,7 +22,7 @@ if [ "$bench" == "simd" ]; then
 
 
     if [ "$action" == "build" ]; then
-	EXEC=$exec make clean
+	EXEC=$exec make clean_nonbase
     fi
     
     mkdir -p execs_$exec

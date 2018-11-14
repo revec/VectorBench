@@ -54,4 +54,4 @@ clean:
 	rm -rf $(EXEC_DIR)/*
 
 clean_nonbase:
-	find $(EXEC_DIR)/* -not -name 'base*' | xargs rm -rf
+	find $(EXEC_DIR)/* -not -name 'base*' -not -name 'Test*' | xargs rm -rf
