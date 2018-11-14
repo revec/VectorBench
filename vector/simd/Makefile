@@ -1,5 +1,5 @@
 CXX ?= g++
-CXXFLAGS += -march=core-avx2 -mavx2 -mfma -O3 -std=c++11 -DNDEBUG
+CXXFLAGS += -O3 -march=native -std=c++11 -DNDEBUG
 LDFLAGS += -lm -lpthread
 
 CUR_DIR = 
