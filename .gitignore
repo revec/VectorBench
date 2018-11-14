@@ -19,3 +19,4 @@ output/
 *.sh
 !build_llvm.sh
 !run_bench.sh
+!run.sh
