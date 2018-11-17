@@ -1,7 +1,9 @@
 CXX_REVEC ?= /mnt/revec/build/bin/clang++
 CXX_NOREVEC ?= /mnt/revec/build-pre-revec/bin/clang++
 OUTPUT_DIR ?= execs
-FLAGS_256= -march=skylake
+# FLAGS_256= -march=skylake
+# FLAGS_512= -march=native
+FLAGS_256= -march=native -mno-avx512f -mno-avx512pf -mno-avx512er -mno-avx512cd
 FLAGS_512= -march=native
 
 CXXFLAGS= -DX265_DEPTH=8 -O3 -Isource/common
