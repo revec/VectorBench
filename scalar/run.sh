@@ -53,7 +53,7 @@ if [ "$bench" == "spec2006" ]; then
     fi
     FC1=$FC CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=$action --noreportable --tune=$tune --size=$size $individual
     
-elif [ "$1" == "spec2017" ]; then
+elif [ "$bench" == "spec2017" ]; then
     echo "${red}running spec2017 benchmarks${reset}"
     cd spec2017-install
     . ./shrc
