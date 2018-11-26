@@ -49,9 +49,9 @@ if [ "$bench" == "spec2006" ]; then
     fi
 
     if [ "$action" == "build" ]; then
-	CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --noreportable --tune=$tune --size=$size $individual
+	FC1=$FC CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=scrub --noreportable --tune=$tune --size=$size $individual
     fi
-    CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=$action --noreportable --tune=$tune --size=$size $individual
+    FC1=$FC CC1=$CC CXX1=$CXX runspec --config=$SPEC2006_CONFIG --action=$action --noreportable --tune=$tune --size=$size $individual
     
 elif [ "$1" == "spec2017" ]; then
     echo "${red}running spec2017 benchmarks${reset}"
@@ -63,9 +63,9 @@ elif [ "$1" == "spec2017" ]; then
     fi
 
     if [ "$action" == "build" ]; then
-	CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --noreportable --tune=$tune --size=$size $individual
+	FC1=$FC CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=scrub --noreportable --tune=$tune --size=$size $individual
     fi
-    CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=$action --noreportable --tune=$tune --size=$size $individual
+    FC1=$FC CC1=$CC CXX1=$CXX runcpu --config=$SPEC2017_CONFIG --action=$action --noreportable --tune=$tune --size=$size $individual
 
 
 elif [ "$bench" == "nas" ]; then
