@@ -1,0 +1,3 @@
+627.cam4_s needs lot of stack space; so run the following before running the SPEC benchmark suite
+
+Stack size set to unlimited using "ulimit -s unlimited"
