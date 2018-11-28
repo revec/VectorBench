@@ -68,8 +68,6 @@ static void z_solve(void);
 static void z_backsubstitute(void);
 static void z_solve_cell(void);
 
-//#define RUN_LOOP
-
 /*--------------------------------------------------------------------
       program BT
 c-------------------------------------------------------------------*/
@@ -140,12 +138,6 @@ c-------------------------------------------------------------------*/
 
   timer_clear(1);
   timer_start(1);
-
-#define NUM_TIMERS 15
-  unsigned i = 0;
-  for(i = 2; i < NUM_TIMERS; i++){
-    timer_clear(i);
-  }
    
   for (step = 1; step <= niter; step++) {
 
@@ -182,10 +174,6 @@ c-------------------------------------------------------------------*/
 		  verified, NPBVERSION,COMPILETIME, CS1, CS2, CS3, CS4, CS5, 
 		  CS6, "(none)");
 
-  for(i = 2; i < NUM_TIMERS; i++){
-    printf("%f\n",timer_read(i));
-  }
-
 }
 
 /*--------------------------------------------------------------------
@@ -216,34 +204,20 @@ c-------------------------------------------------------------------*/
 
 static void adi(void) {
 
-#ifndef RUN_LOOP
 #pragma omp parallel
-  timer_start(2);
   compute_rhs();
-    timer_stop(2);
-#endif
 
 #pragma omp parallel
-    timer_start(3);
-    x_solve();
-    timer_stop(3);
-
-#ifndef RUN_LOOP
+  x_solve();
+  
 #pragma omp parallel
-    timer_start(4);
-    y_solve();
-    timer_stop(4);
-
+  y_solve();
+    
 #pragma omp parallel
-    timer_start(5);
-    z_solve();
-    timer_stop(5);
-
+  z_solve();
+  
 #pragma omp parallel
-    timer_start(6);
-    add();
-    timer_stop(6);
-#endif
+  add();
 
 }
 
@@ -949,7 +923,6 @@ c-------------------------------------------------------------------*/
 #pragma omp for  
   for (j = 1; j < grid_points[1]-1; j++) {
     for (k = 1; k < grid_points[2]-1; k++) {
-      timer_start(10);
       for (i = 0; i < grid_points[0]; i++) {
 
 	tmp1 = 1.0 / u[i][j][k][0];
@@ -1040,12 +1013,9 @@ c-------------------------------------------------------------------*/
 	njac[i][j][k][4][4] = ( c1345 ) * tmp1;
 
       }
-      timer_stop(10);
 /*--------------------------------------------------------------------
 c     now jacobians set, so form left hand side in x direction
 c-------------------------------------------------------------------*/
-      #ifndef RUN_LOOP
-      timer_start(11);
       for (i = 1; i < grid_points[0]-1; i++) {
 
 	tmp1 = dt * tx1;
@@ -1212,8 +1182,6 @@ c-------------------------------------------------------------------*/
 	  - tmp1 * dx5;
 
       }
-      timer_stop(11);
-      #endif
     }
   }
 }
@@ -2715,19 +2683,9 @@ c     of the sweep.
 c     
 c-------------------------------------------------------------------*/
 
-  timer_start(7);
   lhsx();
-  timer_stop(7);
-
-#ifndef RUN_LOOP
-  timer_start(8);
-  x_solve_cell();
-  timer_stop(8);
-  
-  timer_start(9);
+  x_solve_cell(); 
   x_backsubstitute();
-  timer_stop(9);
-#endif
 }
       
       
