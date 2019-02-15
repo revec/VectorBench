@@ -1,6 +1,7 @@
-# Benchmarks
+# VectorBench: Benchmarks for vectorization
 
-This repository contains a conglomerate of benchmarks that you can use to evaluate the efficacy of your compiler transformations.
+This repository contains benchmarks that you can use to evaluate the efficacy of your compiler transformations, particularly those that auto-vectorize scalar code or revectorize SIMD code. VectorBench includes a unique suite of more than 200 hand-vectorized functions, most of which have scalar equivalents.
+
 They can be used for both correctness testing as well as for performance testing of general purpose compiler transformations.
 None of the benchmark code is written by us, but are extracted from popular code bases or benchmark suites that are available.
 We provide you with convenience scripts and drivers to build and benchmark performance on your computer environments.
@@ -9,6 +10,8 @@ The main purpose of this repo is to provide a single source of compiler benchmar
 Redistributable code and benchmarks are included in this repo, where as benchmarks which require commercial licenses should be
 downloaded and installed at the correct locations to use the drivers provided by this repo.
 Benchmarks are mainly divided into two categories, namely scalar (non hand-vectorized) and vector (hand-vectorized) benchmarks.
+
+Please cite [Revec: Program Rejuvenation through Revectorization](https://arxiv.org/abs/1902.02816.pdf) if you use this benchmark suite in your work.
 
 ## scalar benchmarks
 
