@@ -60,7 +60,7 @@ ALIGN_VAR_32(static const int16_t, tab_idct_8x8[12][8]) =
     {  36, -83,  36, -83, 36, -83, 36, -83 }
 };
 
-void sse3_idct8(const int16_t* src, int16_t* dst, intptr_t stride)
+void sse3_idct8(const int16_t * __restrict__ src, int16_t * __restrict__ dst, intptr_t stride)
 {
     __m128i m128iS0, m128iS1, m128iS2, m128iS3, m128iS4, m128iS5, m128iS6, m128iS7, m128iAdd, m128Tmp0, m128Tmp1, m128Tmp2, m128Tmp3, E0h, E1h, E2h, E3h, E0l, E1l, E2l, E3l, O0h, O1h, O2h, O3h, O0l, O1l, O2l, O3l, EE0l, EE1l, E00l, E01l, EE0h, EE1h, E00h, E01h;
     __m128i T00, T01, T02, T03, T04, T05, T06, T07;
@@ -297,7 +297,7 @@ void sse3_idct8(const int16_t* src, int16_t* dst, intptr_t stride)
     _mm_storeh_pi((__m64*)&dst[7 * stride +  4], _mm_castsi128_ps(T11));
 }
 
-void sse3_idct16(const int16_t *src, int16_t *dst, intptr_t stride)
+void sse3_idct16(const int16_t * __restrict__ src, int16_t * __restrict__ dst, intptr_t stride)
 {
 #define READ_UNPACKHILO(offset)\
     const __m128i T_00_00A = _mm_unpacklo_epi16(*(__m128i*)&src[1 * 16 + offset], *(__m128i*)&src[3 * 16 + offset]);\
@@ -675,7 +675,7 @@ void sse3_idct16(const int16_t *src, int16_t *dst, intptr_t stride)
 #undef UNPACKHILO
 #undef READ_UNPACKHILO
 
-void sse3_idct32(const int16_t *src, int16_t *dst, intptr_t stride)
+void sse3_idct32(const int16_t * __restrict__ src, int16_t * __restrict__ dst, intptr_t stride)
 {
     //Odd
     const __m128i c16_p90_p90   = _mm_set1_epi32(0x005A005A); //column 0

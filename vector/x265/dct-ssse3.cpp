@@ -110,7 +110,7 @@ ALIGN_VAR_32(static const int16_t, tab_dct_16_1[][8]) =
 #undef MAKE_COEF
 };
 
-void ssse3_dct16(const int16_t *src, int16_t *dst, intptr_t stride)
+void ssse3_dct16(const int16_t * __restrict__ src, int16_t * __restrict__ dst, intptr_t stride)
 {
     // Const
     __m128i c_4     = _mm_set1_epi32(DCT16_ADD1);
@@ -676,7 +676,7 @@ ALIGN_VAR_32(static const int16_t, tab_dct_32_1[][8]) =
 #undef MAKE_COEF16
 };
 
-void ssse3_dct32(const int16_t *src, int16_t *dst, intptr_t stride)
+void ssse3_dct32(const int16_t * __restrict__ src, int16_t * __restrict__ dst, intptr_t stride)
 {
     // Const
     __m128i c_8     = _mm_set1_epi32(DCT32_ADD1);
